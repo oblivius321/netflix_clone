@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href="img/Logo-site.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        @media (max-width: 768px) {
+            .container__lista {
+                display: flex;
+                overflow-x: scroll;
+                scroll-snap-type: x mandatory;
+            }
+
+            .container__video {
+                flex: 0 0 auto;
+                scroll-snap-align: start;
+                margin-right: 10px;
+            }
+
+            .container__lista::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="celular__cabeca">
+        <img src="img/Netflix_logo.png" alt="Logo da netflix" class="celular__logo">
+        <img src="img/Editar-perfil.png" alt="Gerenciar Perfis" class="celular__edit">
+    </div>
+
+    <section class="escolha">
+        <h1 class="escolha__texto">Quem está assistindo?</h1>
+        <ul class="escolha__perfil">
+            <li class="escolha__lista">
+                <a href="principal.html" class="perfil"><img src="img/Perfil.png" alt="Foto de perfil" class="perfil__foto"></a>
+                <p class="perfil__texto">ruzlane</p>
+            </li>
+
+            <li class="escolha__lista">
+                <img src="img/Mais-perfil.png" alt="Adicionar perfil" class="perfil__foto mais">
+                <p class="perfil__texto">Adicionar perfis</p>
+            </li>
+        </ul>
+        <button class="botao">Gerenciar perfis</button>
+    </section>
+
+    <div class="container__lista">
+        <!-- Exemplo de item de vídeo -->
+        <div class="container__video">
+            <img src="img/video1.jpg" alt="Vídeo 1">
+        </div>
+        <div class="container__video">
+            <img src="img/video2.jpg" alt="Vídeo 2">
+        </div>
+        <div class="container__video">
+            <img src="img/video3.jpg" alt="Vídeo 3">
+        </div>
+        <!-- Adicione mais vídeos conforme necessário -->
+    </div>
+
+    <script>
+        document.querySelector('.mais').addEventListener('click', () => {
+            const errorBalloon = document.createElement('div');
+            errorBalloon.textContent = 'não é possivel adicionar mais ninguem porque eu sou o amor de sua vida!';
+            errorBalloon.style.position = 'absolute';
+            errorBalloon.style.backgroundColor = '#ff0000';
+            errorBalloon.style.color = '#fff';
+            errorBalloon.style.padding = '10px';
+            errorBalloon.style.borderRadius = '5px';
+            errorBalloon.style.top = '50%';
+            errorBalloon.style.left = '50%';
+            errorBalloon.style.transform = 'translate(-50%, -50%)';
+            errorBalloon.style.zIndex = '1000';
+            document.body.appendChild(errorBalloon);
+
+            setTimeout(() => {
+                errorBalloon.remove();
+            }, 3000);
+        });
+
+        const containerLista = document.querySelectorAll('.container__lista');
+        containerLista.forEach(lista => {
+            lista.addEventListener('touchstart', (e) => {
+                lista.dataset.startX = e.touches[0].clientX;
+            });
+
+            lista.addEventListener('touchmove', (e) => {
+                const startX = parseFloat(lista.dataset.startX);
+                const deltaX = e.touches[0].clientX - startX;
+                lista.scrollLeft -= deltaX;
+                lista.dataset.startX = e.touches[0].clientX;
+            });
+        });
+    </script>
+</body>
+</html>
