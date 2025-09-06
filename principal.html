@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Netflix</title>
+    <link rel="shortcut icon" href="img/Logo-site.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="script.js" defer></script>
+</head>
+
+<body>
+
+<!--TOPO DA PAGINA, CABEÇARIO CONTENDO: LOGO/INICIO/SÉRIES/FILMES/(MINHA LISTA - APENAS NO PC) E TODOS OS LINKS REDIRECIONANDO PARA A PÁGINA PRINCIPAL-->
+
+    <header>
+        <img src="img/Netflix_logo.png" alt="Netflix Logo" style="height: 40px;">
+        <ul>
+            <li><a href="principal.html">Início</a></li>
+            <li><a href="principal.html">Séries</a></li>
+            <li><a href="principal.html">Minha Lista</a></li>
+        </ul>
+    </header>
+
+<main>
+<!--FILME EM EXIBIÇÃO COM UMA BACKGROUND DO FILME(NO CELULAR É OUTRO BACKGROUND) JUNTO COM UM BOTÃO PARA ASSISTIR E UM PARA (MAIS INFORMAÇÕES - NÃO ESTÁ FUNCIONANDO, FUTURAMENTE ESTARÁ)-->
+
+    <section class="container__background">
+        <img src="img/Titulo.png" alt="Titulo" class="container__titulo">
+        <p class="container__texto__mobile">O filme de romance aclamado pela<br> crítica, com recordes de venda em<br> bilheteira, considerado uns dos<br> melhores filmes de romance.</p>
+        <p class="container__texto mobile__sumir">Assista a historia de dois jovens que decidiram ser noivos <br> e estão aprendendo a se perdoar e vencer todos os problemas da vida.</p>
+        <div class="container__botao">
+            <a href="filme5.html" class="botao__assistir"><img src="img/Play.png" class="play">Assistir</a> 
+            <button class="botao__assistir info"><img src="img/info.png" class="play"><p class="mais__info">Mais Informações</p></button>    
+        </div>
+    </section>
+
+    <!--SEÇÃO CONTENDO FILMES DO ASSISTIR NOVAMENTE(OS FILMES SÃO COLOCADOS MANUALMENTE)-->
+
+    <section class="section">
+        <h2>Assistir novamente</h2>
+        <div class="carousel">
+            
+            <div class="container__video">
+                <a href="filme1.html">
+                    <img src="img/video1.png" alt="Video" class="cropped">
+                    <div class="desc">A Cinco Passos de Você</div>
+                </a>
+            </div>
+
+            <div class="container__video">
+                <a href="https://youtube.com/shorts/1u0S37AMSrI?feature=share">
+                    <img src="img/video2.png" alt="Video" class="cropped">
+                    <div class="desc">Pretendente Surpresa</div>
+                </a>
+            </div>
+
+            <div class="container__video">
+                <a href="filme4.html">
+                    <img src="img/video4.png" alt="Video" class="cropped">
+                    <div class="desc">Dois Malucos no Pedaço</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!--SEÇÃO CONTENDO FILMES DA MINHA LISTA(OS FILMES SÃO COLOCADOS MANUALMENTE)-->
+
+    <section class="section">
+        <h2>Minha Lista</h2>
+        <div class="carousel">
+
+            <div class="container__video">
+                <a href="filme5.html">
+                    <img src="img/video5.png" alt="Video" class="cropped">
+                    <div class="desc">The First Love</div>
+                </a>
+            </div>
+
+            <div class="container__video">
+                <a href="filme4.html">
+                    <img src="img/video4.png" alt="Video" class="cropped">
+                    <div class="desc">Dois Malucos no Pedaço</div>
+                </a>
+            </div>
+
+            <div class="container__video">
+                <a href="filme2.html">
+                    <img src="img/video2.png" alt="Video" class="cropped">
+                    <div class="desc">Pretendente Surpresa</div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+<!--SEÇÃO CONTENDO TODOS OS FILMES(OS FILMES SÃO COLOCADOS MANUALMENTE)-->
+
+    <section class="section">
+        <h2>Todos os Filmes</h2>
+        <div class="carousel">
+
+            <div class="container__video carrossel_item">
+                <a href="filme1.html">
+                    <img src="img/video1.png" alt="Video" class="cropped">
+                    <div class="desc">A Cinco Passos de Você</div>
+                </a>
+            </div>
+
+            <div class="container__video carrossel_item">
+                <a href="https://youtube.com/shorts/1u0S37AMSrI?feature=share">
+                    <img src="img/video2.png" alt="Video" class="cropped">
+                    <div class="desc">Pretendente Surpresa</div>
+                </a>
+            </div>
+
+            <div class="container__video carrossel_item">
+                <a href="filme4.html">
+                    <img src="img/video4.png" alt="Video" class="cropped">
+                    <div class="desc">Dois Malucos no Pedaço</div>
+                </a>
+            </div>
+
+            <div class="container__video carrossel_item">
+                <a href="filme5.html">
+                    <img src="img/video5.png" alt="Video" class="cropped">
+                    <div class="desc">The First Love</div>
+                </a>
+            </div>
+
+            <div class="container__video carrossel_item">
+                <a href="filme4.html">
+                    <img src="img/video4.png" alt="Video" class="cropped">
+                    <div class="desc">Dois Malucos no Pedaço</div>
+                </a>
+            </div>
+        
+            <div id="limitador">limitador</div>
+        </div>
+        </div>
+
+    </section>
+</main>
+
+<!--RODAPE DA PAGINA-->
+
+    <footer class="rodape">
+        <h2 class="rodape__texto">Para poder desbloquear mais filmes precisamos viver mais
+    me perdoa e me aceita como teu esposo!</h2> 
+    </footer>
+</body>
+</html>
