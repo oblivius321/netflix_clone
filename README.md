@@ -2,11 +2,11 @@
 
 ## Propósito
 
-Nesse projeto meu próposito era recriar um clone da Netflix com a intenção de fazer uma surpresa para minha namorada como presente de um ano de namoro.
+Nesse projeto meu próposito era recriar um clone da Netflix com a intenção de fazer uma surpresa para minha noiva.
 
 ## Idealização
 
-Tive a ideía após ver um vídeo onde um programador fez a mesma coisa, então comecei a fazer rascunhos em um caderno.
+Tive a ideía após ver um vídeo onde um programador fez a mesma coisa, então peguei algumas inspirações para estudar sobre.
 
 ## Construção
 
